@@ -29,4 +29,5 @@ end
 
 hello_func = fn
 %{first_name: a, second_name: b, age: c} = map -> "Hello " <> map.first_name <> " " <> map.second_name <> "!"
+_ -> "Error map format"
 end
