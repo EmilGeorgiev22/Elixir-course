@@ -1,19 +1,21 @@
 #zadacha 1
 
-length_of_tuple = fn                                                                                                                          
- {a} -> 1                                                                                                                                     
- {a,b} -> 2                                                                                                                                   
- {a,b,c} -> 3                                                                                                                                 
- {a,b,c,d} -> 4                                                                                                                               
- _ -> "Shouldn't you use a list"                                                                                                             
+length_of_tuple = fn 
+ {a} -> 1
+ {a,b} -> 2
+ {a,b,c} -> 3
+ {a,b,c,d} -> 4 
+ _ -> "Shouldn't you use a list"
  end
 
 
 #zadacha 2
 
-iex(1)> fizz_func = fn                                                                                                                              0,0,c -> "FizzBuzz"                                                                                                                         
-0,b,c -> "Fizz"                                                                                                                                     a,0,c -> "Buzz"                                                                                                                         
-a,b,c -> c                                                                                       
+iex(1)> fizz_func = fn 
+0,0,c -> "FizzBuzz"
+0,b,c -> "Fizz" 
+a,0,c -> "Buzz"
+a,b,c -> c
 end 
 
 #zadacha 3
@@ -25,5 +27,6 @@ end
 
 #zadacha 4
 
-hello_func = fn                                                                                                                                     %{first_name: a, second_name: b, age: c} = map -> "Hello " <> map.first_name <> " " <> map.second_name <> "!"
+hello_func = fn
+%{first_name: a, second_name: b, age: c} = map -> "Hello " <> map.first_name <> " " <> map.second_name <> "!"
 end
