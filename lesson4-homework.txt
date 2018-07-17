@@ -1,7 +1,7 @@
-#zadacha 1
+0#zadacha 1
 
 iex(23)> sentence = fn x ->
-...(23)> fn str ->    
+..(23)> fn str ->    
 ...(23)> if x == "." || x == "!" || x == "?" do    
 ...(23)> str <> x
 ...(23)> else
