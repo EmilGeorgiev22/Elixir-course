@@ -1,14 +1,14 @@
-0#zadacha 1
+#zadacha 1
 
-iex(23)> sentence = fn x ->
-..(23)> fn str ->    
-...(23)> if x == "." || x == "!" || x == "?" do    
-...(23)> str <> x
-...(23)> else
-...(23)> IO.puts "You should've provided either '.', '!' or '?'"
-...(23)> end
-...(23)> end
-...(23)> end
+sentence = fn x ->
+fn str ->    
+if x == "." || x == "!" || x == "?" do    
+str <> x
+else
+IO.puts "You should've provided either '.', '!' or '?'"
+end
+end
+end
 
 
 #zadacha 2
