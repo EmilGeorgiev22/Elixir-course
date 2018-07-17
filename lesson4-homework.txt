@@ -1,0 +1,41 @@
+#zadacha 1
+
+iex(23)> sentence = fn x ->
+...(23)> fn str ->    
+...(23)> if x == "." || x == "!" || x == "?" do    
+...(23)> str <> x
+...(23)> else
+...(23)> IO.puts "You should've provided either '.', '!' or '?'"
+...(23)> end
+...(23)> end
+...(23)> end
+
+
+#zadacha 2
+
+Enum.map(["Alice Addison", "Bob Benetton"], fn x -> String.split(x) end)
+
+
+#zadacha 3
+
+Enum.map([%{name: "Alice Addison", age: 14}, %{name: "Bob Benetton", age: 21}, %{name: "Eve Elliot", age: 18}], fn x -> to_string(x.name) <> ": " <> to_string(x.age) <> " years old" end)
+
+
+#zadacha 4
+
+Enum.find_value([%{name: "Alice Addison", age: 14}, %{name: "Bob Benetton", age: 21}, %{name: "Eve Elliot", age: 18}, %{name: "Jane Doe", age: 1}], fn x -> if x.age == 1 do to_string(x.name) <> ": " <> to_string(x.age) <> " year old" end end)
+
+
+#zadacha 5
+
+Enum.drop_while(["An example sentence", "Another sentence", "Third sentence"], fn x -> String.contains?(x,"a") end)
+
+
+#zadacha 6
+
+Enum.map([[1,2,3], [4,5,6], [7,8,9]], fn x -> Enum.map(x, fn y -> y*2 end) end)
+
+
+#zadacha 7
+
+Enum.map([[1,2,3], [4,5,6], [7,8,9]], fn x -> Enum.filter(x, fn y -> rem(y,2) == 0 end) end)
