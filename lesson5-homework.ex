@@ -60,7 +60,6 @@
       uppercase_list(tail,list)
    end
     end
-
-   def uppercase_list([head | tail]), do: uppercase_list([head | tail], [])
     
+   def uppercase_list([head | tail]), do: uppercase_list([head | tail], []) 
     end
