@@ -17,8 +17,7 @@ defmodule Ex7Zad2 do
   
   def pow(num, power, result) do
     if power > 0 do
-      result = result * num
-      pow(num, power - 1, result)
+      pow(num, power - 1, result * num)
     else
       result
     end
