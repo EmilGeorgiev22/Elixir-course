@@ -1,0 +1,20 @@
+defmodule TodoApp do
+  @moduledoc """
+  Documentation for TodoApp.
+  """
+
+  
+  def new() do
+    []
+  end
+
+  def add(todo_list, id, text, date, complete) do
+    tuple = {id, text, date, complete}
+    [tuple | todo_list]
+  end
+
+  def find(list, id)
+    Enum.reduce(list, [], fn x, acc -> if x == {id, _, _, _} do x else acc end end)
+  end
+  
+end
