@@ -3,7 +3,6 @@ defmodule TodoApp do
   Documentation for TodoApp.
   """
 
-  
   def new() do
     []
   end
@@ -14,8 +13,6 @@ defmodule TodoApp do
   end
 
   def find(list, id) do
-    # Enum.reduce(list, [], fn {todo_id, _, _, _} = todo, acc -> if todo_id == id do todo else acc end end)
-    #Enum.map(list, fn x -> Enum.filter(x, fn todo -> if id == todo.id do todo else [] end end) end)
     Enum.filter(list, fn todo -> id == todo.id end)
   end
 
